@@ -1,0 +1,243 @@
+/* todo 需要总结一下：两个元素间的相对边界，元素高度宽度计算（是由子元素还是父元素决定）*/
+
+.clearfix {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+
+/***************************/
+header {
+    background-color: #581C5B;
+}
+
+header div {
+    width: 980px;
+    height: 80px;
+    margin: 0 auto;
+    position: relative;
+}
+
+header div img {
+    position: absolute;
+    bottom: 5px;
+}
+
+@media (min-width: 1080px) {
+    header > a {
+        display: inline;
+        float: right;
+        margin-top: -32px;
+        margin-right: 10px;
+    }
+}
+
+@media (max-width: 1080px) {
+    header > a {
+        display: none;
+    }
+}
+
+header nav {
+    float: right;
+    position: absolute;
+    bottom: 5px;
+    right: 0;
+}
+
+header ul {
+    color: white;
+    list-style-type: none;
+}
+
+header ul li {
+    float: left;
+}
+
+/* todo 注意字体family的设置，text-decoration不能继承，要设置到直接效果元素上 */
+header a {
+    color: #ffffff;
+    text-decoration: none;
+    font: 14px STSong, Simsun, sans-serif;
+    margin-left: 28px;
+}
+
+/*********************************/
+/* [todo] 背景图片的自动缩放应该如何控制 */
+.section1 {
+    background-image: url(../img/banner-bg.jpg);
+    height: 525px;
+    filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale')";
+    -moz-background-size:100% 100%;
+    background-size:100% 100%;
+}
+
+.section1 > div {
+    position: relative;
+    width: 980px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.section1 div div {
+    background-image: linear-gradient(to bottom, rgba(255,255,255,0.7), rgba(255,255,255,0.5) 25%, rgba(255,255,255,0));
+    padding: 10px 10px 30px 10px;
+    color: #ffffff;
+    width: 360px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.section1 div div h2 {
+    margin-bottom: 12px;
+    font-size: 14px;
+    float: right;
+}
+
+.section1 div div p {
+    font-size: 12px;
+    clear: right;
+    line-height: 150%;
+}
+
+/*******************************/
+.section2 {
+    padding-top: 10px;
+    background-color: lightgray;
+    padding-bottom: 110px;
+}
+
+.section2 > div {
+    width: 980px;
+    margin: 0 auto;
+    overflow: hidden;
+
+}
+
+.section2 div div {
+    background-color: #fff;
+    float: left;
+    width: 320px;
+    margin-right: 10px;
+
+    padding-bottom: 5000px;
+    margin-bottom: -5000px;
+}
+
+.section2 div div:last-child {
+    margin-right: 0;
+}
+
+.section2 div div img {
+    margin: 10px 10px 15px 10px;
+    
+}
+
+.section2 div div p {
+    text-indent: 2em;
+    margin: 15px 30px 25px 30px;
+    font-size: 12px;
+    line-height: 170%;
+}
+
+
+/*******************************/
+.section3 {
+    background-color: #fff;
+    text-align: center;
+    padding-bottom: 100px;
+}
+
+.section3 img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    margin-top: -50px;
+}
+
+.section3 h2 {
+    font-weight: normal;
+    font-size: 20px;
+    margin: 50px auto 40px auto;
+    font-family: Century Gothic ,sans-serif;
+}
+
+.section3 p {
+    text-align: left;
+    width: 600px;
+    margin: 0 auto;
+    text-indent: 2em;
+    font-size: 14px;
+}
+
+
+/*******************************/
+/* todo overflow:hidden 和 clearfix的区别？ */
+footer {
+    color: #ffffff;
+    background-color: #000;
+}
+
+footer nav {
+    padding: 12px 0;
+    overflow: hidden;
+    border-bottom: 1px solid gray;
+}
+
+footer nav a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+footer nav ul {
+    float: left;
+    position: relative;
+    left: 50%;
+}
+
+footer nav li {
+    margin-right: 35px;
+    float: left;
+    position: relative;
+    left: -50%;
+}
+
+footer nav li:last-child {
+    margin-right: 0;
+}
+
+footer > div {
+    overflow: hidden;
+    width: 980px;
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
+
+footer div div {
+    float: left;
+    width: 196px;
+}
+
+footer div h2 {
+    margin: 40px 0 30px 0;
+}
+
+footer div li {
+    padding-bottom: 5px;
+}
+
+footer > div:last-child a {
+    display: inline-block;
+}
+
+footer > div:last-child h2 {
+    font-size: 10px;
+    margin: 0 0 10px 0;
+}
+
+footer > div:last-child {
+    text-align: center;
+    padding: 0;
+} 
