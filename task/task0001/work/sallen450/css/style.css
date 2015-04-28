@@ -1,6 +1,8 @@
 /* todo 需要总结一下：两个元素间的相对边界，元素高度宽度计算（是由子元素还是父元素决定）*/
 
-.clearfix {
+/* todo 加上注释说明都表示的什么样式 */
+
+.clearfix:after {
     content: '';
     display: block;
     clear: both;
@@ -42,7 +44,7 @@ header div img {
 }
 
 header nav {
-    font-size: 0;       /*这个是去掉a标签之间回车造成的的空白*/
+    font-size: 0; /*这个是去掉a标签之间回车造成的的空白*/
     float: right;
     position: absolute;
     bottom: 5px;
@@ -214,4 +216,409 @@ div#copyright h2 {
 div#copyright {
     text-align: center;
     padding: 0;
-} 
+}
+
+/**************************/
+section.blog-article {
+    padding: 10px 0 10px 0;
+    background-color: #EEEEEE;
+}
+
+div.blog-main {
+    position: relative;
+    float: left;
+    width: 710px;
+}
+
+div.blog-main article {
+    background-color: #ffffff;
+    margin: 10px 0 10px 0;
+    padding: 24px 22px 20px 18px;
+}
+
+div.blog-main h1 {
+    color: #A142A6;
+    margin: 5px 0 5px 0;
+    font-size: 16px;
+}
+
+div.blog-main h2 {
+    margin: 10px 0 10px 0;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+div.blog-main p {
+    font-size: 12px;
+    line-height: 150%;
+    text-indent: 2em;
+}
+
+p.article-author-date {
+    color: gray;
+    font-size: 10px;
+    text-align: right;
+    margin-top: 25px;
+}
+
+div.article-date-category {
+    position: absolute;
+    width: 50px;
+    left: -60px;
+}
+
+div.article-date-category span {
+    padding: 10px 5px 10px 5px;
+    text-align: center;
+    color: #ffffff;
+    display: inline-block;
+    width: 100%;
+}
+
+span.article-date {
+    background-color: #581C5B;
+}
+
+span.article-category {
+    background-color: #B349B8;
+}
+
+div.page-turning {
+    margin: 10px 0;
+    text-align: center;
+}
+
+div.page-turning span {
+    display: inline-block;
+    margin: 0 2px;
+}
+
+div.page-turning a {
+    font-size: 12px;
+    display: inline-block;
+    padding: 15px;
+    text-align: center;
+    background-color: #fff;
+    text-decoration: none;
+}
+
+/*********************************/
+div.blog-aside {
+    padding-left: 10px;
+    width: 260px;
+    float: left;
+    overflow: hidden;
+}
+
+div.blog-aside > div {
+    background-color: #fff;
+    margin-top: 10px;
+}
+
+div.blog-aside-category div {
+    border-bottom: 1px solid #DDDDDD;
+    border-left: 3px solid #E4C0E5;
+}
+
+div.blog-aside-category a {
+    display: inline-block;
+    text-decoration: none;
+    padding: 20px;
+}
+
+div.blog-aside-category div:hover {
+    border-left: 3px solid #581C5B;
+}
+
+/**********************************/
+div.blog-aside-calendar {
+    padding: 20px 25px 20px 25px;
+}
+
+div.blog-aside-year-month span, div.blog-aside-year-month a {
+    font-size: 15px;
+    display: inline-block;
+}
+
+span.current-month {
+    margin: 0 48px;
+}
+
+div.blog-aside-year-month a {
+    padding: 5px 5px 10px 5px;
+    text-decoration: none;
+}
+
+div.blog-aside-date span {
+    display: inline-block;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 5px;
+    font-size: 15px;
+    color: #cccccc;
+    width: 30px;
+}
+
+div.blog-aside-date span#current-date {
+    color: #ffffff;
+    background-color: #7C2383;
+}
+
+div.blog-aside-date span.selected-date, div.blog-aside-date span:hover {
+    color: #7C2383;
+    font-weight: bold;
+}
+
+/*******************************/
+div.blog-aside-tags {
+    padding: 10px;
+}
+
+div.blog-aside-tags span {
+    display: inline-block;
+    margin: 10px 2px 0 2px;
+    color: #7C2383;
+}
+
+div.blog-aside-tags p {
+    color: gray;
+    font-size: 12px;
+}
+
+span.tag-big {
+    font-size: 30px;
+}
+
+span.tag-medium {
+    font-size: 15px;
+}
+
+span.tag-small {
+    font-size: 10px;
+}
+
+/**************************************/
+div.blog-aside-search {
+    padding: 20px;
+}
+
+div.search-box {
+    border: 1px solid #cccccc;
+    padding: 0;
+}
+
+div.search-box form {
+    float: left;
+}
+
+div.search-box input {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: none;
+    height: 42px;
+    border: 0;
+    float: left;
+    padding: 0;
+}
+
+input.search-button {
+    color: #ffffff;
+    font-size: 20px;
+    width: 42px;
+}
+
+input#search-text {
+    font-size: 25px;
+    width: 176px;
+}
+
+/*********************************/
+.gallery-bgcolor {
+    padding: 20px 0;
+    background-color: #EEEEEE;
+}
+
+div.gallery-main {
+    float: left;
+    width: 710px;
+}
+
+div.gallery-tab {
+    font-size: 0;
+}
+
+div.gallery-tab a {
+    font-size: 15px;
+    padding: 15px 20px 20px 20px;
+    text-decoration: none;
+    color: #000;
+    background-color: #fff;
+    text-align: center;
+    height: 46px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    display: inline-block;
+    border-style: solid;
+    border-width: 4px 0 1px 0;
+    margin-right: 1px;
+    border-color: #EEEEEE;
+    border-top-color: #7C2383;
+}
+
+div.gallery-tab a.active {
+    border-top-color: #b35e00;
+    border-bottom-color: #ffffff
+}
+
+/***********************************/
+/************布局的时候用纸笔把整体的框架和间距标出来更好*********/
+div.gallery-content {
+    overflow: hidden;
+    background-color: #fff;
+    padding: 20px 10px 20px 20px;
+}
+
+div.gallery-column {
+    overflow: hidden;
+    float: left;
+    margin-right: 10px;
+}
+
+div.gallery-big-column {
+    width: 330px;
+}
+
+div.gallery-small-column {
+    width: 160px;
+}
+
+div.gallery-big-box {
+    font-size: 0;
+    width: 330px;
+    margin-bottom: 10px;
+}
+
+div.gallery-small-box {
+    font-size: 0;
+    width: 160px;
+    margin-bottom: 10px;
+}
+
+div.small-column-right {
+    margin-right: 0;
+}
+
+/****************************/
+div.box-content {
+    padding: 10px;
+    overflow: hidden;
+    background-color: #A142A6;
+}
+
+div.box-content span {
+    float: left;
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    font-size: 15px;
+    line-height: 30px;
+    border: 1px solid #EEEEEE;
+    border-radius: 50%;
+}
+
+div.box-content h2, div.box-content p {
+    margin-left: 40px;
+}
+
+div.box-content h2 {
+    margin-bottom: 5px;
+    font-size: 15px;
+}
+
+div.box-content p {
+    font-size: 10px;
+}
+
+/*******************************/
+div.gallery-more {
+    text-align: center;
+    background-color: #fff;
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 20px;
+    line-height: 20px;
+}
+
+/***************************/
+div.gallery-aside {
+    padding-left: 10px;
+    width: 260px;
+    float: left;
+    overflow: hidden;
+}
+
+div.gallery-aside > div {
+    background-color: #fff;
+    margin-top: 10px;
+}
+
+div.gallery-top-popular {
+    padding: 10px;
+
+}
+
+div.gallery-top-popular p {
+    margin: 10px 0 20px 0;
+    color: #bbbbbb;
+}
+
+div.popular-item {
+    padding: 5px;
+}
+
+div.popular-item span {
+    margin-right: 10px;
+    vertical-align: middle;
+    display: inline-block;
+    height: 20px;
+
+}
+
+span.popular-item-index {
+    width: 20px;
+    text-align: center;
+    font-size: 10px;
+    line-height: 20px;
+    border-radius: 50%;
+    color: #ffffff;
+    background-color: #7C2383;
+}
+
+span.popular-item-progress {
+    border: 1px solid #7C2383;
+
+    width: 100px;
+}
+
+span.popular-item-progress span {
+    background-color: #7C2383;
+    width: 50%;
+}
+
+span.popular-item-name {
+    font-size: 10px;
+    line-height: 20px;
+}
+
+/*
+
+
+
+ */
+
+
