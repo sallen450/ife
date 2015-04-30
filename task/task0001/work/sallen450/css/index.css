@@ -1,0 +1,102 @@
+
+/*********************************/
+/* [todo] 背景图片的自动缩放应该如何控制 */
+.page-banner {
+    background-image: url(../img/banner-bg.jpg);
+    height: 525px;
+    filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale')";
+    -moz-background-size: 100% 100%;
+    background-size: 100% 100%;
+}
+
+.page-banner > div {
+    position: relative;
+    height: 100%;
+}
+
+.transparent-bg-box {
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.5) 25%, rgba(255, 255, 255, 0));
+    padding: 10px 10px 30px 10px;
+    color: #ffffff;
+    width: 360px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.transparent-bg-box h2 {
+    margin-bottom: 12px;
+    font-size: 14px;
+    float: right;
+}
+
+.transparent-bg-box p {
+    font-size: 12px;
+    clear: right;
+    line-height: 150%;
+}
+
+/*******************************/
+.page-intro {
+    padding-top: 10px;
+    background-color: lightgray;
+    padding-bottom: 110px;
+}
+
+.page-intro > div {
+    overflow: hidden;
+}
+
+.intro-item {
+    background-color: #fff;
+    float: left;
+    width: 320px;
+    margin-right: 10px;
+
+    padding-bottom: 5000px;
+    margin-bottom: -5000px;
+}
+
+.intro-item:last-child {
+    margin-right: 0;
+}
+
+.intro-item img {
+    margin: 10px 10px 15px 10px;
+}
+
+.intro-item p {
+    text-indent: 2em;
+    margin: 15px 30px 25px 30px;
+    font-size: 12px;
+    line-height: 170%;
+}
+
+/*******************************/
+.author-intro {
+    background-color: #fff;
+    text-align: center;
+    padding-bottom: 100px;
+}
+
+.author-intro img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    margin-top: -50px;
+}
+
+.author-intro h2 {
+    font-weight: normal;
+    font-size: 20px;
+    margin: 50px auto 40px auto;
+    font-family: Century Gothic, sans-serif;
+}
+
+.author-intro p {
+    text-align: left;
+    width: 600px;
+    margin: 0 auto;
+    text-indent: 2em;
+    font-size: 14px;
+}

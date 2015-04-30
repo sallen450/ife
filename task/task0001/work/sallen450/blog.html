@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>QingHua</title>
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/comm.css">
+    <link rel="stylesheet" href="css/blog.css">
 </head>
 <body>
 <header>
-    <div class="max-center">
-        <img src="img/logo.jpeg" alt="Logo" width="40px" height="40px"/>
+    <div class="page-content-box">
+        <img class="logo" src="img/logo.jpeg" alt="Logo"/>
         <!-- 横向的导航可以用span和a实现,不必用ul和li -->
         <nav>
             <a href="index.html">首页</a>
@@ -18,11 +18,11 @@
             <a href="about.html">关于</a>
         </nav>
     </div>
-    <a href="github.com"><img src="img/github-logo.png" alt="github-logo"/></a>
+    <a class="github-logo" href="github.com"><img src="img/github-logo.png" alt="github-logo"/></a>
 </header>
 
-<section class="blog-article">
-    <div class="max-center clearfix">
+<section>
+    <div class="page-content-box clearfix">
         <div class="blog-main">
             <article>
                 <div class="article-date-category">
@@ -100,10 +100,8 @@
             </div>
         </div>
 
-
-
         <div class="blog-aside">
-            <div class="blog-aside-search">
+            <div class="aside-search-box">
                 <div class="search-box clearfix">
                     <!-- <img src="" alt="todo" /> -->
                     <form>
@@ -114,11 +112,12 @@
             </div>
 
             <div class="blog-aside-category">
-                <div><a href="">HTML</a></div>
-                <div><a href="">CSS</a></div>
-                <div><a href="">JavaScript</a></div>
-                <div><a href="">其他文章</a></div>
+                <a href="">HTML</a>
+                <a href="">CSS</a>
+                <a href="">JavaScript</a>
+                <a href="">其他文章</a>
             </div>
+
             <div class="blog-aside-calendar">
                 <div class="blog-aside-year-month">
                     <span class="pre-month"><a href="">&lt;</a></span>
@@ -144,6 +143,7 @@
                     <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span></span><span></span>
                 </div>
             </div>
+
             <div class="blog-aside-tags">
                 <p>Tags</p>
                 <div class="tags">
@@ -169,15 +169,13 @@
 
 <footer>
     <nav>
-        <ul>
-            <a href="index.html">首页</a>
-            <a href="blog.html">文章</a>
-            <a href="gallery.html">作品</a>
-            <a href="about.html">关于</a>
-        </ul>
+        <a href="index.html">首页</a>
+        <a href="blog.html">文章</a>
+        <a href="gallery.html">作品</a>
+        <a href="about.html">关于</a>
     </nav>
-    <div class="max-center">
-        <div>
+    <div class="page-content-box clearfix">
+        <div class="footer-link-column">
             <h2>学习资料</h2>
             <ul>
                 <li>Link</li>
@@ -187,7 +185,7 @@
                 <li>Link</li>
             </ul>
         </div>
-        <div>
+        <div class="footer-link-column">
             <h2>友情链接</h2>
             <ul>
                 <li>Link</li>
@@ -197,7 +195,7 @@
                 <li>Link</li>
             </ul>
         </div>
-        <div>
+        <div class="footer-link-column">
             <h2>学习资料</h2>
             <ul>
                 <li>Link</li>
@@ -207,7 +205,7 @@
                 <li>Link</li>
             </ul>
         </div>
-        <div>
+        <div class="footer-link-column">
             <h2>友情链接</h2>
             <ul>
                 <li>Link</li>
@@ -217,7 +215,7 @@
                 <li>Link</li>
             </ul>
         </div>
-        <div>
+        <div class="footer-link-column">
             <h2>友情链接</h2>
             <ul>
                 <li>Link</li>
@@ -233,8 +231,6 @@
         <a href="github.com"><img src="img/github-logo-white.png" alt="github-logo"/></a>
     </div>
 </footer>
-<script>
-</script>
 </body>
 </html>
 <!-- todo
