@@ -310,7 +310,7 @@ for (var i = 0; i < spans.length; ++i) {
                 preScroll();
                 moveLeft(index);
             }
-            else {
+            else if (index < currentIndex){
                 clearInterval(moveIntervalID);
                 preScroll();
                 moveRight(index);
