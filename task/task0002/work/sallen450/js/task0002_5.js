@@ -6,6 +6,7 @@ var offsetX = 0;    //记录鼠标点击点，距离红色方块的左上角偏�
 var offsetY = 0;
 var movingElement = null;      //正在移动的元素
 
+//todo 需要重构
 //todo 逻辑可以重新组织一下
 //参数：一个容器内所有可移动元素的上下左右坐标，基于可视窗口
 function CreateBox(boxName, top, right, bottom, left) {

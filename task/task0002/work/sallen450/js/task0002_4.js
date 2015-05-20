@@ -3,6 +3,7 @@
  */
 
 //todo 与后端交互
+    //todo 需要重构
 var suggestData = ['Simon', 'Erik', 'Kener', 'Some', 'Siri'];
 
 function createSuggestItem(value) {

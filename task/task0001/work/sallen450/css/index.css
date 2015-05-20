@@ -3,7 +3,6 @@
 .page-banner {
     background-image: url(../img/banner-bg.jpg);
     height: 525px;
-    filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale')";
     -moz-background-size: 100% 100%;
     background-size: 100% 100%;
 }

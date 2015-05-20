@@ -200,7 +200,7 @@
 
  */
 
-
+//todo 需要重构
 var spans = document.querySelectorAll('span');
 var imgs = document.querySelectorAll('img');
 
@@ -212,19 +212,26 @@ var maxIndex = imgs.length - 1;
 
 var count = 0;
 
-//todo 为什么连续点击一个小圆点的时候，会出现count一直为101的情况，并且图片卡住，不切换
+//为什么连续点击一个小圆点的时候，会出现count一直为101的情况，并且图片卡住，不切换 （解决：移动过程中把当前小圆点的事件清除即可）
 function moveLeft(nextIndex) {
     count = 0;
 
     console.log("currentIndex: " + currentIndex);
     console.log("nextIndex: " + nextIndex);
     function move() {
+         for (var i = 0; i < spans.length; ++i) {
+            spans[i].onclick = null;
+         }
         console.log("left count: " + count);
         if (count == 101) {
             clearTimeout(moveIntervalID);
             spans[currentIndex].className = "";
             spans[nextIndex].className = "circle-active";
             currentIndex = nextIndex;
+
+             for (var i = 0; i < spans.length; ++i) {
+                spans[i].onclick = clickCircle;
+             }
             return;
         }
         imgs[currentIndex].style.left = -count + "%";
@@ -242,12 +249,18 @@ function moveRight(nextIndex) {
     console.log("nextIndex: " + nextIndex);
     function move() {
         console.log("right count: " + count);
+         for (var i = 0; i < spans.length; ++i) {
+            spans[i].onclick = null;
+         }
         if (count == 101) {
             console.log("count: " + count);
             clearTimeout(moveIntervalID);
             spans[currentIndex].className = "";
             spans[nextIndex].className = "circle-active";
             currentIndex = nextIndex;
+             for (var i = 0; i < spans.length; ++i) {
+                spans[i].onclick = clickCircle;
+             }
             return;
         }
         imgs[currentIndex].style.left = count + "%";
@@ -302,22 +315,42 @@ function scrollImg() {
     moveLeft(nextIndex);
 }
 
-for (var i = 0; i < spans.length; ++i) {
-    spans[i].onclick = (function (index) {
-        return function () {
-            if (index > currentIndex) {
-                clearInterval(moveIntervalID);
-                preScroll();
-                moveLeft(index);
-            }
-            else {
-                clearInterval(moveIntervalID);
-                preScroll();
-                moveRight(index);
-            }
-        }
-    }(i));
-}
+// old code
+//for (var i = 0; i < spans.length; ++i) {
+//    spans[i].onclick = (function (index) {
+//        return function () {
+//            if (index > currentIndex) {
+//                clearInterval(moveIntervalID);
+//                preScroll();
+//                moveLeft(index);
+//            }
+//            else {
+//                clearInterval(moveIntervalID);
+//                preScroll();
+//                moveRight(index);
+//            }
+//        }
+//    }(i));
+//}
+ function clickCircle() {
+     var clickIndex = parseInt(this.index);
+     if (clickIndex > currentIndex) {
+         clearInterval(moveIntervalID);
+         preScroll();
+         moveLeft(clickIndex);
+     }
+     else if (clickIndex < currentIndex){
+         clearInterval(moveIntervalID);
+         preScroll();
+         moveRight(clickIndex);
+     }
+ }
+
+ //给小圆点添加点击切换图片的事件
+ for (var i = 0; i < spans.length; ++i) {
+     spans[i].index = i;
+     spans[i].onclick = clickCircle;
+ }
 
 document.getElementById("slide-img").onmouseover = function () {
     preScroll();
@@ -329,4 +362,6 @@ document.getElementById("slide-img").onmouseout = function () {
 };
 
 waitIntervalID = setInterval(scrollImg, 3000);
+
+
 

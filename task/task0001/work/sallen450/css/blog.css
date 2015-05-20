@@ -16,13 +16,13 @@ article {
     padding: 24px 22px 20px 18px;
 }
 
-article h1 {
+article h2 {
     color: #A142A6;
     margin: 5px 0 5px 0;
     font-size: 16px;
 }
 
-article h2 {
+article h3 {
     margin: 10px 0 10px 0;
     font-size: 12px;
     font-weight: bold;
