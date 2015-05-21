@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>GTD App</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>GTD Tool</header>
+<div id="main" class="clearfix">
+    <!-- 分类列表栏 -->
+    <div id="category-container"  class="column">
+        <div id="category-list">
+            <ul>
+                <li><a>所有任务</a></li>
+                <li>
+                    <a class="uneditable">分类列表</a>
+                    <ul>
+                        <li><a class="uneditable">默认分类</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div id="add-category" class="add"><i></i><span>新增分类</span></div>
+    </div>
+    <!-- 任务标题列表栏-->
+    <div id="task-container" class="column">
+        <div id="task-filter">
+            <span>所有</span>
+            <span>未完成</span>
+            <span>已完成</span>
+        </div>
+        <div id="task-list">
+            <div>
+                <h2>2015-05-01</h2>
+                <ul>
+                    <li><a>todo</a></li>
+                    <li><a>todo</a></li>
+                    <li><a>todo</a></li>
+                </ul>
+            </div>
+            <div>
+                <h2>2015-04-01</h2>
+                <ul>
+                    <li><a>todo</a></li>
+                    <li><a>todo</a></li>
+                    <li><a>todo</a></li>
+                </ul>
+            </div>
+            <div>
+                <h2>2015-03-02</h2>
+                <ul>
+                    <li><a>todo</a></li>
+                    <li><a>todo</a></li>
+                    <li><a>end</a></li>
+                </ul>
+            </div>
+
+        </div>
+        <div id="add-task" class="add"><i></i><span>新增任务</span></div>
+    </div>
+    <!-- 任务详细说明 -->
+    <div id="detail-container" class="column">
+        <div id="detail-title-container">
+            <span>todo6</span>
+            <button>finish</button>
+            <button>edit</button>
+        </div>
+        <div id="detail-date-container">2015-01-12</div>
+        <div id="detail-content-container"><p contenteditable="true">我是段落，我是段落，我是段落，我是段落，我是段落，我是段落，我是段落，我是段落，我是段落，我是段落，我是段落，我是段落，我是段落，我是段落，我是段落</p></div>
+    </div>
+</div>
+</body>
+</html>
