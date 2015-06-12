@@ -10,67 +10,57 @@
 <header>GTD Tool</header>
 <div id="main" class="clearfix">
     <!-- 分类列表栏 -->
-    <div id="category-container"  class="column">
+    <div id="category-container" class="column">
         <div id="category-list">
-            <ul>
-                <li><a>所有任务</a></li>
-                <li>
-                    <a class="uneditable">分类列表</a>
-                    <ul>
-                        <li><a class="uneditable">默认分类</a></li>
-                    </ul>
-                </li>
-            </ul>
         </div>
 
-        <div id="add-category" class="add"><i></i><span>新增分类</span></div>
+        <div id="add-category" class="add"><i class="add-icon"></i><span>新增分类</span></div>
     </div>
     <!-- 任务标题列表栏-->
     <div id="task-container" class="column">
         <div id="task-filter">
-            <span>所有</span>
-            <span>未完成</span>
-            <span>已完成</span>
+            <span id="task-filter-all" class="task-done-filter-btn">所有</span>
+            <span id="task-filter-doing" class="task-done-filter-btn">未完成</span>
+            <span id="task-filter-done" class="task-done-filter-btn">已完成</span>
         </div>
         <div id="task-list">
-            <div>
-                <h2>2015-05-01</h2>
-                <ul>
-                    <li><a>todo</a></li>
-                    <li><a>todo</a></li>
-                    <li><a>todo</a></li>
-                </ul>
-            </div>
-            <div>
-                <h2>2015-04-01</h2>
-                <ul>
-                    <li><a>todo</a></li>
-                    <li><a>todo</a></li>
-                    <li><a>todo</a></li>
-                </ul>
-            </div>
-            <div>
-                <h2>2015-03-02</h2>
-                <ul>
-                    <li><a>todo</a></li>
-                    <li><a>todo</a></li>
-                    <li><a>end</a></li>
-                </ul>
-            </div>
+
 
         </div>
-        <div id="add-task" class="add"><i></i><span>新增任务</span></div>
+        <div id="add-task" class="add"><i class="add-icon"></i><span>新增任务</span></div>
     </div>
     <!-- 任务详细说明 -->
     <div id="detail-container" class="column">
-        <div id="detail-title-container">
-            <span>todo6</span>
-            <button>finish</button>
-            <button>edit</button>
+        <div class="detail-title-container">
+            <span id="detail-title-content"></span>
+            <span id="btn-edit" class="btn"></span>
+            <span id="btn-finish" class="btn"></span>
         </div>
-        <div id="detail-date-container">2015-01-12</div>
-        <div id="detail-content-container"><p contenteditable="true">我是段落，我是段落，我是段落，我是段落，我是段落，我是段落，我是段落，我是段落，我是段落，我是段落，我是段落，我是段落，我是段落，我是段落，我是段落</p></div>
+        <div class="detail-date-container">
+            <span id="detail-date-content"></span>
+        </div>
+        <div class="detail-content-container">
+            <pre id="detail-discribe-content"></pre>
+        </div>
+    </div>
+
+    <div class='dialog-container' id="dialog">
+        <div class='dialog-content-container'>
+            <div class="dialog-content">
+                <h2>编辑任务</h2>
+                <label>任务名称：<input type="text" id="dialog-name"></label>
+                <label>任务日期：<input type="text" id="dialog-date"></label>
+                <label><span>任务详细：</span><textarea cols="30" rows="5" id="dialog-detail"></textarea></label>
+            </div>
+
+            <div class="dialog-btn">
+                <button type="button" id="btn-ok">保存</button>
+                <button type="button" id="btn-cancel">取消</button>
+            </div>
+        </div>
     </div>
 </div>
+
+<script src="js/gtd.js"></script>
 </body>
 </html>

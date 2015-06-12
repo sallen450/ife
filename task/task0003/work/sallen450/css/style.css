@@ -9,18 +9,16 @@ html, body {
     min-width: 900px;
 }
 
+body {
+    font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
+}
+
 ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    margin-left: 10px;
+    margin-left: 20px;
 }
-
-li {
-    margin: 10px 0;
-    white-space: nowrap;
-}
-
 
 /*
  * header style
@@ -50,11 +48,23 @@ header {
  * common style
  * ========================================
  */
+a {
+    display: inline-block;
+    width: 100%;
+    padding: 8px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
 
 a:hover,
 #task-filter span:hover,
 .active {
-    background-color: #c0c0c0;
+    background-color: #C6E3FE;
+}
+
+.task-done-filter-btn {
+    padding: 5px;
 }
 
 .column {
@@ -74,12 +84,23 @@ a:hover,
     width: 100%;
     height: 40px;
     background-color: dodgerblue;
+    padding: 12px 0;
+    box-sizing: border-box;
+}
 
+.add-icon {
+    margin: 0 20px 0 20px;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-image: url("../img/16/0267-plus.png");
+    vertical-align: middle;
 }
 
 .add span {
     font-size: 15px;
-    line-height: 40px;
+    vertical-align: middle;
+    display: inline-block;
 }
 
 #main {
@@ -99,7 +120,9 @@ a:hover,
 #category-list {
     overflow-x: hidden;
     overflow-y: scroll;
-    margin-right: 20px;
+    /*padding-left: 20px;*/
+    padding-right: 20px;
+    height: 100%;
 }
 
 /*
@@ -110,7 +133,6 @@ a:hover,
     border-right: 1px solid #AAAAAA;
     float: left;
     width: 300px;
-    padding-left: 10px;
 }
 
 #task-filter {
@@ -122,9 +144,11 @@ a:hover,
 }
 
 #task-list {
+    height: 95%;
     overflow-x: hidden;
     overflow-y: scroll;
-    margin-right: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 /*
@@ -137,26 +161,111 @@ a:hover,
     padding-left: 10px;
 }
 
-#detail-title-container {
+.detail-title-container {
     border-bottom: 1px solid #AAAAAA;
     padding: 10px 0;
+    min-height: 30px;
 }
 
-#detail-title-container button {
+.detail-title-container button {
     float: right;
     margin-right: 10px;
 }
 
-#detail-date-container {
+.detail-date-container {
     border-bottom: 1px solid #AAAAAA;
     padding: 10px 0;
+    min-height: 20px;
 }
 
-#detail-content-container {
+.detail-content-container {
     padding: 10px 0;
 }
 
+.detail-content-container {
+    line-height: 150%;
+}
+
+.detail-title-container span {
+    vertical-align: middle;
+}
+
+.btn {
+    margin-right: 20px;
+    float: right;
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+}
+
+#btn-finish {
+    background-image: url("../img/32/0273-checkmark.png");
+}
+
+#btn-edit {
+    
+    background-image: url("../img/32/0007-pencil2.png");
+}
+
+#detail-title-content {
+    display: inline-block;
+    font-weight: bold;
+    font-size: 25px;
+
+}
+
+pre {
+    white-space: pre-wrap;
+    width: 100%;
+}
+
+.task-done a {
+    text-decoration: line-through;
+    color: #AAAAAA;
+}
 
 
+/*********** dialog ***************/
+textarea {
+    resize: none;
+}
 
+.dialog-container {
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.dialog-content-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -150px auto 0 -200px;;
+    width: 400px;
+    height: 300px;
+    background-color: #FFFFFF;
+    border: 1px solid #FFFFFF;
+}
+
+.dialog-content label {
+    display: block;
+    margin: 20px 0 0 20px;
+}
+
+.dialog-content label span {
+    vertical-align: top;
+}
+
+.dialog-content h2 {
+    text-align: center;
+}
+
+.dialog-btn {
+    padding: 20px;
+    text-align: center;
+}
 
